@@ -1,0 +1,28 @@
+<!--
+  @description       : 
+  @author            : Fatih SARI
+  @group             : 
+  @last modified on  : 05-13-2026
+  @last modified by  : Fatih SARI
+-->
+<template>
+    <header class="custom-header">
+        <div class="logo-section">
+            <a href="/">
+                <img src={logoUrl} alt="Klod Logo" class="header-logo" />
+            </a>
+        </div>
+        <nav>
+            <a href="/">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Services ▾</button>
+                <div class="dropdown-content">
+                    <a href="#" onclick={handleServiceSelect} data-id="sales">Sales Cloud </a>
+                    <a href="#" onclick={handleServiceSelect} data-id="service">Experience Cloud</a>
+                    <a href="#" onclick={handleServiceSelect} data-id="agent">Agentforce </a>
+                </div>
+            </div>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+</template>

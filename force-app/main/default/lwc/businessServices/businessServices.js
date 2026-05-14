@@ -1,8 +1,8 @@
 import { LightningElement } from 'lwc';
-import KLOD_LOGO_RESOURCE from '@salesforce/resourceUrl/KlodLogo';
 import { NavigationMixin } from 'lightning/navigation';
-export default class CustomHeader extends NavigationMixin(LightningElement) {
-    logoUrl = KLOD_LOGO_RESOURCE;
+
+export default class BusinessServices extends NavigationMixin(LightningElement) {
+
     handleServiceSelect(event) {
      
 
@@ -13,12 +13,18 @@ export default class CustomHeader extends NavigationMixin(LightningElement) {
         let targetPageApiName = 'Home'; // Hata durumunda ana sayfaya dönmesi için varsayılan
 
         // Tıklanan id değerine göre hangi sayfaya gidileceğini eşleştiriyoruz
-        if (selectedServiceId === 'sales') {
+        if (selectedServiceId === 'mail') {
             targetPageApiName = 'EmailAutomationService__c'; // Sizin açtığınız "sales" sayfasının API adı
-        } else if (selectedServiceId === 'service') {
-            targetPageApiName = 'Service__c'; // Sizin açtığınız "service" sayfasının API adı
-        } else if (selectedServiceId === 'agent') {
-            targetPageApiName = 'Agent__c'; // Sizin açtığınız "agent" sayfasının API adı
+        } else if (selectedServiceId === 'report') {
+            targetPageApiName = 'EmailAutomationService__c';
+        } else if (selectedServiceId === 'customer') {
+            targetPageApiName = 'EmailAutomationService__c'; 
+        } else if (selectedServiceId === 'sms') {
+            targetPageApiName = 'EmailAutomationService__c'; 
+        } else if (selectedServiceId === 'lead') {
+            targetPageApiName = 'EmailAutomationService__c';  // Sizin açtığınız "service" sayfasının API adı
+        } else if (selectedServiceId === 'ownportal') {
+            targetPageApiName = 'EmailAutomationService__c'; // Sizin açtığınız "agent" sayfasının API adı
         }
 
         // Salesforce LWR uyumlu yönlendirme tetikleyicisi
@@ -28,7 +34,7 @@ export default class CustomHeader extends NavigationMixin(LightningElement) {
                 name: targetPageApiName // Builder'daki tam API adını buraya gönderiyoruz
             }
         });
-
+    
         window.scrollTo({
             top: 0,
             left: 0,

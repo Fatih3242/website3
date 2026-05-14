@@ -1,0 +1,196 @@
+.service-page {
+    background: #071120;
+    color: white;
+}
+
+/* HERO */
+
+.hero-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    padding: 6rem 8%;
+}
+
+.mini-title {
+    color: #5fa8ff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.hero-description {
+    color: #c7d3e3;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 600px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.primary-btn {
+    background: #ff8b3d;
+    color: white;
+    border: none;
+    padding: 1rem 1.8rem;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.primary-btn:hover {
+    background: #ff7417;
+}
+
+.secondary-btn {
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 1rem 1.8rem;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.hero-right iframe {
+    width: 100%;
+    height: 420px;
+    border-radius: 24px;
+}
+
+/* BENEFITS */
+
+.benefits-section {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+    padding: 0 8% 6rem;
+}
+
+.benefit-card {
+    background: rgba(255,255,255,0.05);
+    padding: 2rem;
+    border-radius: 24px;
+}
+
+.benefit-card h3 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* STEPS */
+
+.steps-section,
+.features-section,
+.pricing-section,
+.cta-section {
+    padding: 6rem 8%;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+}
+
+.step-card {
+    background: rgba(255,255,255,0.05);
+    padding: 2rem;
+    border-radius: 24px;
+}
+
+.step-card span {
+    font-size: 3rem;
+    color: #5fa8ff;
+    font-weight: bold;
+}
+
+.step-card h3 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* FEATURES */
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.5rem;
+}
+
+.feature-item {
+    background: rgba(255,255,255,0.05);
+    padding: 1.2rem;
+    border-radius: 14px;
+}
+
+/* PRICING */
+
+.pricing-section {
+    text-align: center;
+}
+
+.pricing-section h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* CTA */
+
+.cta-section {
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.cta-section p {
+    color: #c7d3e3;
+    margin-bottom: 2rem;
+}
+
+/* MOBILE */
+
+@media(max-width: 1024px){
+
+    .hero-section,
+    .benefits-section,
+    .steps-grid,
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .section-header h2,
+    .cta-section h2,
+    .pricing-section h2 {
+        font-size: 2rem;
+    }
+
+}

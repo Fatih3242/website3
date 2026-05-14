@@ -2,15 +2,16 @@
 .search-wrapper {
     background-color: #001b3d;
     padding: 15px;
-    border-radius: 8px;
+    border-radius: 0px;
     width: 100%;
     display: flex;
     justify-content: center;
+    
 }
 
 /* Arama çubuğu kapsayıcısı */
 .search-container {
-    width: 100%;
+        width: 100%;
     max-width: 600px;
     position: relative;
 }
@@ -25,7 +26,7 @@
     outline: none;
     
     /* İstediğin renkler */
-    background-color: #FFFFFF; /* İç kısmı beyaz */
+    background-color: #ffffff; /* İç kısmı beyaz */
     color: #000000;            /* Yazı siyah */
     
     /* Akıcı geçiş efekti */

@@ -1,0 +1,201 @@
+<!--
+  @description       : 
+  @author            : Fatih SARI
+  @group             : 
+  @last modified on  : 05-14-2026
+  @last modified by  : Fatih SARI
+-->
+<template>
+    <section class="services-section">
+
+        <div class="overlay"></div>
+
+        <div class="header">
+            <p class="mini-title">SMART BUSINESS AUTOMATION</p>
+
+            <h1>
+                Simple CRM Solutions <br />
+                For Businesses
+            </h1>
+
+            <p class="subtitle">
+                Manage customers, automate communication,
+                and track your sales from one simple system.
+            </p>
+        </div>
+
+        <div class="services-grid">
+
+            <!-- CARD 1 -->
+            <div class="service-card">
+                <div class="category">AUTOMATION</div>
+
+                <lightning-icon
+                    icon-name="utility:email"
+                    size="medium"
+                    class="icon">
+                </lightning-icon>
+
+                <h2>Send Emails To All Customers</h2>
+
+                <ul>
+                    <li>Send campaigns instantly</li>
+                    <li>Share offers and updates</li>
+                    <li>Automatic reminders</li>
+                </ul>
+
+                <div class="bottom-area">
+                    <p>✔ Setup Included</p>
+                    <p>✔ Training Included</p>
+
+                    <button onclick={handleServiceSelect} data-id="mail">
+                        Explore Portal & Get Pricing
+                    </button>
+                </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="service-card">
+                <div class="category">REPORTING</div>
+
+                <lightning-icon
+                    icon-name="utility:chart"
+                    size="medium"
+                    class="icon">
+                </lightning-icon>
+
+                <h2>Track Your Sales Easily</h2>
+
+                <ul>
+                    <li>Monthly sales reports</li>
+                    <li>Top customers overview</li>
+                    <li>Profit tracking dashboard</li>
+                </ul>
+
+                <div class="bottom-area">
+                    <p>✔ Real-Time Reports</p>
+                    <p>✔ Mobile Access</p>
+
+                    <button onclick={handleServiceSelect} data-id="report" >
+                        Explore Portal & Get Pricing
+                    </button>
+                </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="service-card">
+                <div class="category">CUSTOMER MANAGEMENT</div>
+
+                <lightning-icon
+                    icon-name="utility:people"
+                    size="medium"
+                    class="icon">
+                </lightning-icon>
+
+                <h2>Never Forget A Customer</h2>
+
+                <ul>
+                    <li>Follow up reminders</li>
+                    <li>Task management</li>
+                    <li>Customer history tracking</li>
+                </ul>
+
+                <div class="bottom-area">
+                    <p>✔ Easy To Use</p>
+                    <p>✔ Small Business Focused</p>
+
+                    <button onclick={handleServiceSelect} data-id="customer">
+                        Explore Portal & Get Pricing
+                    </button>
+                </div>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="service-card">
+                <div class="category">COMMUNICATION</div>
+
+                <lightning-icon
+                    icon-name="utility:sms"
+                    size="medium"
+                    class="icon">
+                </lightning-icon>
+
+                <h2>SMS & Notifications       
+                            </h2>
+
+                <ul>
+                    <li>Bulk SMS campaigns</li>
+                    <li>Appointment reminders</li>
+                    <li>Instant notifications</li>
+                </ul>
+
+                <div class="bottom-area">
+                    <p>✔ Fast Delivery</p>
+                    <p>✔ Automation Ready</p>
+
+                    <button onclick={handleServiceSelect} data-id="sms">
+                        Explore Portal & Get Pricing
+                    </button>
+                </div>
+            </div>
+
+            <!-- CARD 5 -->
+            <div class="service-card">
+                <div class="category">LEAD MANAGEMENT</div>
+
+                <lightning-icon
+                    icon-name="utility:world"
+                    size="medium"
+                    class="icon">
+                </lightning-icon>
+
+                <h2>Collect Customers From Your Website</h2>
+
+                <ul>
+                    <li>Website lead forms</li>
+                    <li>Automatic customer creation</li>
+                    <li>Track new requests instantly</li>
+                </ul>
+
+                <div class="bottom-area">
+                    <p>✔ Website Integration</p>
+                    <p>✔ Lead Tracking</p>
+
+                    <button  onclick={handleServiceSelect} data-id="lead">
+                        Explore Portal & Get Pricing
+                    </button>
+                </div>
+            </div>
+
+            <!-- CARD 6 -->
+            <div class="service-card premium-card">
+                <div class="category">CUSTOMER PORTAL</div>
+
+                <lightning-icon
+                    icon-name="utility:desktop"
+                    size="medium"
+                    class="icon">
+                </lightning-icon>
+
+                <h2>Give Customers Their Own Portal</h2>
+
+                <ul>
+                    <li>Track offers online</li>
+                    <li>View invoices and updates</li>
+                    <li>Premium customer experience</li>
+                </ul>
+
+                <div class="bottom-area">
+                    <p>✔ Premium Feature</p>
+                    <p>✔ Experience Cloud Ready</p>
+
+                    <button onclick={handleServiceSelect} data-id="ownportal">
+                        Explore Portal & Get Pricing
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+</template>

@@ -1,0 +1,46 @@
+/* Genel bileşen dış çerçevesi ve arka planı */
+.search-wrapper {
+    background-color: #001b3d;
+    padding: 15px;
+    border-radius: 8px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Arama çubuğu kapsayıcısı */
+.search-container {
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+}
+
+/* Yazı yazacağımız arama kutusu (Input) */
+.custom-search-input {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    border-radius: 25px;
+    outline: none;
+    
+    /* İstediğin renkler */
+    background-color: #FFFFFF; /* İç kısmı beyaz */
+    color: #000000;            /* Yazı siyah */
+    
+    /* Akıcı geçiş efekti */
+    transition: all 0.3s ease;
+}
+
+/* Arama çubuğunun üzerine gelindiğinde (Hover) veya tıklandığında (Focus) */
+.custom-search-input:hover,
+.custom-search-input:focus {
+    /* İstediğin hover rengi: #ffd50098 */
+    border-color: #ffd50098; 
+    box-shadow: 0 0 10px #ffd50098;
+}
+
+/* Arama çubuğu içindeki placeholder (Arama yapın...) yazısının rengi */
+.custom-search-input::placeholder {
+    color: #757575;
+}

@@ -1,0 +1,21 @@
+<!--
+  @description       : 
+  @author            : Fatih SARI
+  @group             : 
+  @last modified on  : 05-14-2026
+  @last modified by  : Fatih SARI
+-->
+<template>
+    <div class="search-wrapper">
+        <div class="search-container">
+            <input 
+                type="text" 
+                placeholder="Search..." 
+                value={searchKey} 
+                oninput={handleInputChange} 
+                onkeydown={handleKeyDown} 
+                class="custom-search-input"
+            />
+        </div>
+    </div>
+</template>

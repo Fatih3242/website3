@@ -1,3 +1,11 @@
+:host {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+}
+
+
 .custom-header {
     background-color: #001b3d;
     padding: 16px 32px;
@@ -13,7 +21,7 @@
 }
 
 nav a {
-    color: white;
+    color: #86ff84;
     text-decoration: none;
     margin-left: 20px;
     font-size: 16px;
@@ -40,7 +48,7 @@ nav a:hover {
 }
 
 .dropdown-content a {
-    color: #ffffff !important;
+    color: #86ff84 !important;
     padding: 12px 16px;
     display: block;
     text-align: left;
@@ -48,7 +56,7 @@ nav a:hover {
 
 .dropdown-content a:hover {
     background-color: #ffd50098;
-    color: #ffffff
+    color: #86ff84
 }
 
 .dropdown:hover .dropdown-content {
@@ -58,7 +66,7 @@ nav a:hover {
 .dropbtn {
     background: transparent !important;
     border: none !important;
-    color: #ffffff !important;
+    color: #86ff84 !important;
     padding: 0 !important;
     font-size: 16px !important;
     cursor: pointer;

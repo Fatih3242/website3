@@ -2,7 +2,7 @@
   @description       : 
   @author            : Fatih SARI
   @group             : 
-  @last modified on  : 05-14-2026
+  @last modified on  : 05-15-2026
   @last modified by  : Fatih SARI
 -->
 <template>
@@ -31,26 +31,19 @@
                 </p>
 
                 <div class="hero-buttons">
-                    <button class="primary-btn">
+                    <button class="primary-btn" onclick={handleNavigation} data-id="booking">
                         Book Free Consultation
                     </button>
 
-                    <button class="secondary-btn">
-                        View Pricing
-                    </button>
+                   
                 </div>
 
             </div>
 
             <div class="hero-right">
 
-                <template if:true={hasVideo}>
-                    <iframe
-                        src={videoUrl}
-                        title="Email Automation Video"
-                        frameborder="0"
-                        allowfullscreen>
-                    </iframe>
+                <template if:true={hasImage}>
+                    <img src={heroImage} alt="CRM Dashboard" />
                 </template>
 
             </div>
@@ -228,7 +221,7 @@
                 We simplify Salesforce for small businesses.
             </p>
 
-            <button class="primary-btn">
+            <button class="primary-btn" onclick={handleNavigation} data-id="booking">
                 Book Free Consultation
             </button>
 

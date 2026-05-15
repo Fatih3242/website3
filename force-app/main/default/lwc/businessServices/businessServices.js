@@ -16,15 +16,15 @@ export default class BusinessServices extends NavigationMixin(LightningElement) 
         if (selectedServiceId === 'mail') {
             targetPageApiName = 'EmailAutomationService__c'; // Sizin açtığınız "sales" sayfasının API adı
         } else if (selectedServiceId === 'report') {
-            targetPageApiName = 'EmailAutomationService__c';
+            targetPageApiName = 'report__c';
         } else if (selectedServiceId === 'customer') {
-            targetPageApiName = 'EmailAutomationService__c'; 
+            targetPageApiName = 'customer__c'; 
         } else if (selectedServiceId === 'sms') {
-            targetPageApiName = 'EmailAutomationService__c'; 
+            targetPageApiName = 'sms__c'; 
         } else if (selectedServiceId === 'lead') {
-            targetPageApiName = 'EmailAutomationService__c';  // Sizin açtığınız "service" sayfasının API adı
+            targetPageApiName = 'lead__c';  // Sizin açtığınız "service" sayfasının API adı
         } else if (selectedServiceId === 'ownportal') {
-            targetPageApiName = 'EmailAutomationService__c'; // Sizin açtığınız "agent" sayfasının API adı
+            targetPageApiName = 'ownportal__c'; // Sizin açtığınız "agent" sayfasının API adı
         }
 
         // Salesforce LWR uyumlu yönlendirme tetikleyicisi

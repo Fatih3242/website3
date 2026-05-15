@@ -1,0 +1,249 @@
+<!--
+  @description       : 
+  @author            : Fatih SARI
+  @group             : 
+  @last modified on  : 05-15-2026
+  @last modified by  : Fatih SARI
+-->
+<template>
+
+    <section class="service-page">
+
+        <!-- HERO -->
+
+        <div class="hero-section">
+
+            <div class="hero-left">
+
+                <p class="mini-title">
+                    CUSTOMER PORTAL
+                </p>
+
+                <h1>
+                    Give Customers Their Own Portal
+                </h1>
+
+                <p class="hero-description">
+                    Provide your customers with a professional online portal
+                    where they can track requests, view updates,
+                    access documents, and communicate with your business anytime.
+                    Perfect for companies that want a more premium customer experience.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <button class="primary-btn" onclick={handleNavigation} data-id="booking">
+                        Book Free Consultation
+                    </button>
+
+                   
+                </div>
+
+            </div>
+
+            <div class="hero-right">
+
+               <template if:true={hasImage}>
+                    <img src={heroImage} alt="CRM Dashboard" />
+                </template>
+
+            </div>
+
+        </div>
+
+        <!-- BENEFITS -->
+
+        <section class="benefits-section">
+
+            <div class="benefit-card">
+
+                <lightning-icon
+                    icon-name="utility:desktop"
+                    size="small">
+                </lightning-icon>
+
+                <h3>Professional Customer Experience</h3>
+
+                <p>
+                    Give customers a modern self-service portal.
+                </p>
+
+            </div>
+
+            <div class="benefit-card">
+
+                <lightning-icon
+                    icon-name="utility:case"
+                    size="small">
+                </lightning-icon>
+
+                <h3>Track Requests Easily</h3>
+
+                <p>
+                    Customers can follow their requests and updates online.
+                </p>
+
+            </div>
+
+            <div class="benefit-card">
+
+                <lightning-icon
+                    icon-name="utility:file"
+                    size="small">
+                </lightning-icon>
+
+                <h3>Share Documents Securely</h3>
+
+                <p>
+                    Upload invoices, contracts, and important files safely.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- HOW IT WORKS -->
+
+        <section class="steps-section">
+
+            <div class="section-header">
+
+                <p class="mini-title">
+                    HOW IT WORKS
+                </p>
+
+                <h2>
+                    Simple Customer Portal Setup
+                </h2>
+
+            </div>
+
+            <div class="steps-grid">
+
+                <div class="step-card">
+
+                    <span>01</span>
+
+                    <h3>Create Your Portal</h3>
+
+                    <p>
+                        Build a branded customer portal for your business.
+                    </p>
+
+                </div>
+
+                <div class="step-card">
+
+                    <span>02</span>
+
+                    <h3>Connect Customer Data</h3>
+
+                    <p>
+                        Link customer accounts, requests, and documents securely.
+                    </p>
+
+                </div>
+
+                <div class="step-card">
+
+                    <span>03</span>
+
+                    <h3>Give Customers Access</h3>
+
+                    <p>
+                        Customers can log in and manage their information anytime.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- FEATURES -->
+
+        <section class="features-section">
+
+            <div class="section-header">
+
+                <p class="mini-title">
+                    FEATURES
+                </p>
+
+                <h2>
+                    Premium Self-Service Experience
+                </h2>
+
+            </div>
+
+            <div class="features-grid">
+
+                <div class="feature-item">
+                    ✔ Customer Login Portal
+                </div>
+
+                <div class="feature-item">
+                    ✔ Request & Case Tracking
+                </div>
+
+                <div class="feature-item">
+                    ✔ Document Sharing
+                </div>
+
+                <div class="feature-item">
+                    ✔ Knowledge Base Access
+                </div>
+
+                <div class="feature-item">
+                    ✔ Mobile Friendly Design
+                </div>
+
+                <div class="feature-item">
+                    ✔ Secure User Access
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- PRICING -->
+
+        <section class="pricing-section">
+
+            <p class="mini-title">
+                STARTING PRICE
+            </p>
+
+            <h2>
+                From €299 / month
+            </h2>
+
+            <p>
+                Salesforce Experience Cloud licensing
+                and custom portal requirements may affect pricing.
+            </p>
+
+        </section>
+
+        <!-- CTA -->
+
+        <section class="cta-section">
+
+            <h2>
+                Ready To Offer A Premium Customer Experience?
+            </h2>
+
+            <p>
+                Build a professional customer portal
+                without complicated development processes.
+            </p>
+
+            <button class="primary-btn" onclick={handleNavigation} data-id="booking">
+                Book Free Consultation
+            </button>
+
+        </section>
+
+    </section>
+
+</template>

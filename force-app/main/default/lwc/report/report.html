@@ -1,0 +1,249 @@
+<!--
+  @description       : 
+  @author            : Fatih SARI
+  @group             : 
+  @last modified on  : 05-15-2026
+  @last modified by  : Fatih SARI
+-->
+<template>
+
+    <section class="service-page">
+
+        <!-- HERO -->
+
+        <div class="hero-section">
+
+            <div class="hero-left">
+
+                <p class="mini-title">
+                    SALES REPORTING
+                </p>
+
+                <h1>
+                    Track Your Sales Easily
+                </h1>
+
+                <p class="hero-description">
+                    Monitor your revenue, customer activity,
+                    and business performance from one simple dashboard.
+                    Built for small businesses that want clear visibility
+                    without complicated systems.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <button class="primary-btn" onclick={handleNavigation} data-id="booking">
+                        Book Free Consultation
+                    </button>
+
+                    
+
+                </div>
+
+            </div>
+
+            <div class="hero-right">
+
+                <template if:true={hasImage}>
+                    <img src={heroImage} alt="CRM Dashboard" />
+                </template>
+
+            </div>
+
+        </div>
+
+        <!-- BENEFITS -->
+
+        <section class="benefits-section">
+
+            <div class="benefit-card">
+
+                <lightning-icon
+                    icon-name="utility:chart"
+                    size="small">
+                </lightning-icon>
+
+                <h3>See Your Revenue Clearly</h3>
+
+                <p>
+                    Understand sales performance instantly.
+                </p>
+
+            </div>
+
+            <div class="benefit-card">
+
+                <lightning-icon
+                    icon-name="utility:trending"
+                    size="small">
+                </lightning-icon>
+
+                <h3>Track Business Growth</h3>
+
+                <p>
+                    Identify trends and growth opportunities.
+                </p>
+
+            </div>
+
+            <div class="benefit-card">
+
+                <lightning-icon
+                    icon-name="utility:desktop"
+                    size="small">
+                </lightning-icon>
+
+                <h3>Simple Dashboards</h3>
+
+                <p>
+                    Easy-to-read reports for everyday use.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- HOW IT WORKS -->
+
+        <section class="steps-section">
+
+            <div class="section-header">
+
+                <p class="mini-title">
+                    HOW IT WORKS
+                </p>
+
+                <h2>
+                    Simple Reporting Setup
+                </h2>
+
+            </div>
+
+            <div class="steps-grid">
+
+                <div class="step-card">
+
+                    <span>01</span>
+
+                    <h3>Connect Your Sales Data</h3>
+
+                    <p>
+                        Import customers, deals, and sales activity.
+                    </p>
+
+                </div>
+
+                <div class="step-card">
+
+                    <span>02</span>
+
+                    <h3>Create Dashboards</h3>
+
+                    <p>
+                        Build simple reports tailored to your business.
+                    </p>
+
+                </div>
+
+                <div class="step-card">
+
+                    <span>03</span>
+
+                    <h3>Monitor Performance</h3>
+
+                    <p>
+                        Track revenue and customer activity in real time.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- FEATURES -->
+
+        <section class="features-section">
+
+            <div class="section-header">
+
+                <p class="mini-title">
+                    FEATURES
+                </p>
+
+                <h2>
+                    Business Insights Made Simple
+                </h2>
+
+            </div>
+
+            <div class="features-grid">
+
+                <div class="feature-item">
+                    ✔ Monthly Sales Reports
+                </div>
+
+                <div class="feature-item">
+                    ✔ Revenue Dashboards
+                </div>
+
+                <div class="feature-item">
+                    ✔ Customer Analytics
+                </div>
+
+                <div class="feature-item">
+                    ✔ Sales Pipeline Tracking
+                </div>
+
+                <div class="feature-item">
+                    ✔ Mobile Access
+                </div>
+
+                <div class="feature-item">
+                    ✔ Real-Time Reporting
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- PRICING -->
+
+        <section class="pricing-section">
+
+            <p class="mini-title">
+                STARTING PRICE
+            </p>
+
+            <h2>
+                From €79 / month
+            </h2>
+
+            <p>
+                Salesforce licensing may apply depending on users
+                and reporting requirements.
+            </p>
+
+        </section>
+
+        <!-- CTA -->
+
+        <section class="cta-section">
+
+            <h2>
+                Ready To Understand Your Business Better?
+            </h2>
+
+            <p>
+                Get clear insights without complicated reporting tools.
+            </p>
+
+            <button class="primary-btn" onclick={handleNavigation} data-id="booking">
+                Book Free Consultation
+            </button>
+
+        </section>
+
+    </section>
+
+</template>

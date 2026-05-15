@@ -1,0 +1,218 @@
+.booking-page {
+    min-height: 100vh;
+    background: #071120;
+    padding: 5rem 8%;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* HERO */
+
+.hero-section {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.mini-title {
+    color: #5fa8ff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.hero-description {
+    max-width: 700px;
+    margin: auto;
+    color: #c7d3e3;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* FORM AREA */
+
+.form-wrapper {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* STEP INDICATOR */
+
+.step-indicator {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.step {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.step.active {
+    background: #5fa8ff;
+    border-color: #5fa8ff;
+    box-shadow: 0 0 20px rgba(95,168,255,0.35);
+}
+
+/* CARD */
+
+.form-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 28px;
+    padding: 3rem;
+    backdrop-filter: blur(14px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.form-card h2 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* INPUTS */
+
+lightning-input,
+lightning-radio-group,
+lightning-checkbox-group {
+    display: block;
+    margin-bottom: 2rem;
+}
+
+/* INPUT LABEL FIX */
+
+.booking-page {
+    --slds-c-input-color-border: rgba(255,255,255,0.15);
+    --slds-c-input-color-background: rgba(255,255,255,0.08);
+    --slds-c-input-text-color: white;
+    --slds-c-input-radius-border: 14px;
+
+    --slds-c-radio-color-border: #5fa8ff;
+    --slds-c-checkbox-color-border: #5fa8ff;
+
+    --slds-c-input-label-text-color: #dbe6f2;
+    --slds-c-radio-label-text-color: #dbe6f2;
+    --slds-c-checkbox-label-text-color: #dbe6f2;
+}
+
+/* SUMMARY */
+
+.summary-card {
+    text-align: center;
+}
+
+.summary-box {
+    background: rgba(255,255,255,0.05);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.summary-box h3 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.summary-box p {
+    color: #c7d3e3;
+    line-height: 1.6;
+}
+
+.price {
+    font-size: 2.7rem;
+    color: #5fa8ff !important;
+    font-weight: 700;
+}
+
+/* BUTTONS */
+
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.primary-btn {
+    background: #ff8b3d;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.primary-btn:hover {
+    background: #ff7417;
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.15);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.secondary-btn:hover {
+    border-color: #5fa8ff;
+    color: #5fa8ff;
+}
+
+.submit-btn {
+    width: 100%;
+    margin-top: 2rem;
+    font-size: 1rem;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .booking-page {
+        padding: 4rem 1.5rem;
+    }
+
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    .form-card {
+        padding: 2rem;
+    }
+
+    .navigation-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
+    }
+
+}

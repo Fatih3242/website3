@@ -1,0 +1,140 @@
+<!--
+  @description       : 
+  @author            : Fatih SARI
+  @group             : 
+  @last modified on  : 05-15-2026
+  @last modified by  : Fatih SARI
+-->
+<template>
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <!-- TOP -->
+
+            <div class="footer-top">
+
+                <!-- BRAND -->
+
+                <div class="footer-brand">
+
+                    <img
+                        src={logoUrl}
+                        alt="Klod Logo"
+                        class="footer-logo"/>
+
+                    <p>
+                        Simple Salesforce CRM solutions
+                        for businesses and solo companies.
+                    </p>
+
+                </div>
+
+                <!-- COMPANY -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Company
+                    </h3>
+
+                    <a onclick={navigateToPage} data-id="aboutUs__c">
+                    About Us
+                    </a>
+
+                    <a onclick={navigateToPage} data-id="Contact__c">
+                    Contact
+                    </a>
+
+                <a onclick={navigateToPage} data-id="Careers__c">
+                    Careers
+                </a>
+
+                </div>
+
+                <!-- SUPPORT -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Support
+                    </h3>
+
+                    <a onclick={navigateToPage} data-id="supportPortal__c">
+                        Get Support
+                    </a>
+
+                    <a onclick={navigateToPage} data-id="booking__c">
+                        Book Consultation
+                    </a>
+
+                    <a onclick={navigateToPage} data-id="systems__c">
+                        System Status
+                    </a>
+
+                </div>
+
+                <!-- LEGAL -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Legal
+                    </h3>
+
+                     <a onclick={navigateToPage} data-id="privacy__c">
+                    Privacy Policy
+                     </a>
+
+                 <a onclick={navigateToPage} data-id="terms__c">
+                    Terms of Service
+                 </a>
+
+                 <a onclick={navigateToPage} data-id="Cookie__c">
+                    Cookie Policy
+                 </a>
+
+                 <a onclick={navigateToPage} data-id="Subscriber__c">
+                    Subscriber Agreement
+                </a>
+
+                </div>
+
+            </div>
+
+            <!-- BOTTOM -->
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 Klod. All rights reserved.
+                </p>
+
+                <div class="footer-links">
+
+                    <a onclick={navigateToPage} data-id="aboutUs__c">
+                        About Us
+                    </a>
+
+                    <a onclick={navigateToPage} data-id="privacy__c">
+                        Privacy
+                    </a>
+
+                    <a onclick={navigateToPage} data-id="terms__c">
+                        Terms
+                    </a>
+
+                    <a onclick={navigateToPage} data-id="Cookie__c">
+                        Cookies
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</template>

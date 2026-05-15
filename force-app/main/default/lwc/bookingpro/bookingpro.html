@@ -1,0 +1,530 @@
+<!--
+  @description       : 
+  @author            : Fatih SARI
+  @group             : 
+  @last modified on  : 05-16-2026
+  @last modified by  : Fatih SARI
+-->
+<template>
+
+    <section class="booking-page">
+
+        <!-- HERO -->
+
+        <div class="hero-section">
+
+            <p class="mini-title">
+                FREE CONSULTATION
+            </p>
+
+            <h1>
+                Build Your CRM Setup
+            </h1>
+
+            <p class="hero-description">
+                Tell us about your business and book your free CRM consultation.
+            </p>
+
+        </div>
+
+        <!-- STEP BAR -->
+
+        <div class="step-indicator">
+
+            <div class={step1Class}
+                 data-step="1"
+                 onclick={goToStep}>
+                1
+            </div>
+
+            <div class={step2Class}
+                 data-step="2"
+                 onclick={goToStep}>
+                2
+            </div>
+
+            <div class={step3Class}
+                 data-step="3"
+                 onclick={goToStep}>
+                3
+            </div>
+
+            <div class={step4Class}
+                 data-step="4"
+                 onclick={goToStep}>
+                4
+            </div>
+
+            <div class={step5Class}
+                 data-step="5"
+                 onclick={goToStep}>
+                5
+            </div>
+
+            <div class={step6Class}
+                 data-step="6"
+                 onclick={goToStep}>
+                6
+            </div>
+
+        </div>
+
+        <!-- STEP 1 -->
+
+        <template if:true={isStep1}>
+
+            <div class="form-card">
+
+                <h2>
+                    Contact Information
+                </h2>
+
+                <div class="input-grid">
+
+                    <input
+                        type="text"
+                        placeholder="Full Name" 
+                        value={fullName}
+                        onchange={handleFullName}>
+                        
+
+                    <input
+                        type="text"
+                        placeholder="Company Name"
+                        value={companyName}
+                        onchange={handleCompanyName}>
+
+                    <input 
+                        data-id="emailField"
+                        type="email" 
+                        placeholder="Enter your email" 
+                        value={email}
+                        oninput={handleEmail} 
+                    />
+                    <input
+                        type="tel"
+                        placeholder="Phone Number"                        
+                        value={phone}
+                        onchange={handlePhone}>
+
+                </div>
+
+            </div>
+
+        </template>
+
+        <!-- STEP 2 -->
+
+        <template if:true={isStep2}>
+
+            <div class="form-card">
+
+                <h2>
+                    Business Size
+                </h2>
+
+                <div class="card-grid">
+
+                    <template
+                        for:each={businessSizes}
+                        for:item="item">
+
+                        <div
+                            key={item}
+                            class={item.className}
+                            data-value={item.value}
+                            onclick={handleBusinessSize}>
+
+                            {item.label}
+
+                        </div>
+
+                    </template>
+
+                </div>
+
+                <h2 class="section-title">
+                    CRM Users
+                </h2>
+
+                <div class="card-grid">
+
+                    <template
+                        for:each={userOptions}
+                        for:item="item">
+
+                        <div
+                            key={item}
+                            class={item.className}
+                            data-value={item.value}
+                            onclick={handleUsers}>
+
+                            {item.label}
+
+                        </div>
+
+                    </template>
+
+                </div>
+
+            </div>
+
+        </template>
+
+        <!-- STEP 3 -->
+
+        <template if:true={isStep3}>
+
+            <div class="form-card">
+
+                <h2>
+                    Current System
+                </h2>
+
+                <div class="card-grid">
+
+                    <template
+                        for:each={crmOptions}
+                        for:item="item">
+
+                        <div
+                            key={item}
+                            class={item.className}
+                            data-value={item.value}
+                            onclick={handleCRM}>
+
+                            {item.label}
+
+                        </div>
+
+                    </template>
+
+                </div>
+
+            </div>
+
+        </template>
+
+        <!-- STEP 4 -->
+
+        <template if:true={isStep4}>
+
+            <div class="form-card">
+
+                <h2>
+                    Features You Need
+                </h2>
+
+                <div class="feature-grid">
+
+                    <template
+                        for:each={features}
+                        for:item="item">
+
+                        <div
+                            key={item}
+                            class={item.className}
+                            data-value={item.value}
+                            onclick={handleFeature}>
+
+                            {item.label}
+
+                        </div>
+
+                    </template>
+
+                </div>
+
+            </div>
+
+        </template>
+
+        <!-- STEP 5 -->
+
+        <template if:true={isStep5}>
+
+            <div class="booking-layout">
+
+                <!-- DAYS -->
+
+                <div class="calendar-card">
+
+                    <h2>
+                        Select Date
+                    </h2>
+
+                    <div class="calendar-grid">
+
+                        <template
+                            for:each={days}
+                            for:item="item">
+
+                            <div
+                                key={item}
+                                class={item.className}
+                                data-value={item.value}
+                                onclick={handleDay}>
+
+                                {item.label}
+
+                            </div>
+
+                        </template>
+
+                    </div>
+
+                </div>
+
+                <!-- HOURS -->
+
+                <div class="hours-card">
+
+                    <h2>
+                        Available Hours
+                    </h2>
+
+                    <div class="hours-grid">
+
+                        <template
+                            for:each={hours}
+                            for:item="item">
+
+                            <div
+                                key={item}
+                                class={item.className}
+                                data-value={item.value}
+                                onclick={handleHour}>
+
+                                {item.label}
+
+                            </div>
+
+                        </template>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </template>
+
+        <!-- STEP 6 -->
+
+        <template if:true={isStep6}>
+
+            <div class="summary-box">
+
+            <h3>
+                Contact Information
+            </h3>
+
+            <p>
+                <strong>Name:</strong>
+                {fullName}
+            </p>
+
+            <p>
+                <strong>Company:</strong>
+                {companyName}
+            </p>
+
+            <p>
+                <strong>Email:</strong>
+                {email}
+            </p>
+
+            <p>
+                <strong>Phone:</strong>
+                {phone}
+            </p>
+
+            </div>
+            <div class="form-card">
+
+                <h2>
+                    Review Your Setup
+                </h2>
+
+                <div class="summary-box">
+
+                    <h3>
+                        Business Size
+                    </h3>
+
+                    <p>
+                        {selectedBusinessSize}
+                    </p>
+
+                </div>
+
+                <div class="summary-box">
+
+                    <h3>
+                        CRM Users
+                    </h3>
+
+                    <p>
+                        {selectedUsers}
+                    </p>
+
+                </div>
+
+                <div class="summary-box">
+
+                    <h3>
+                        Current CRM
+                    </h3>
+
+                    <p>
+                        {selectedCRM}
+                    </p>
+
+                </div>
+
+                <div class="summary-box">
+
+                    <h3>
+                        Selected Features
+                    </h3>
+
+                    <p>
+                        {selectedFeaturesText}
+                    </p>
+
+                    </div>
+
+                    <div class="summary-box">
+
+                          <div class="slds-m-top_medium">
+                            
+                            <!-- Durum 1: Başarılı kayıt olmadıysa ve kullanıcının seçtiği saat varsa gösterilecek normal alan -->
+                            <template if:false={isSubmittedSuccessfully}>
+                                <template if:true={selectedHour}>
+                                    <div class="summary-box">
+                                        <p class="slds-text-heading_small slds-text-color_success">
+                                            📅 Selected Appointment Time: <strong>{selectedDay} - {selectedHour}</strong>
+                                        </p>
+                                    </div>
+                                </template>
+                            </template>
+
+                            <!-- Durum 2: Saat yoksa VEYA butona basıp işlem bittiyse "SİZE ULAŞACAĞIZ" yazacak ana uyarı kartı -->
+                            <template if:true={isSubmittedSuccessfully}>
+                                <div class="info-alert-box">
+                                    <span class="info-alert-title">
+                                        ✅ Thank You! Request Received
+                                    </span>
+                                    <p class="info-alert-desc">
+                                        There are no open calendar slots available right now. However, your CRM request has been saved. Our sales specialists will **reach out to you directly** via your phone/email to schedule the best consultation time.
+                                    </p>
+                                </div>
+                            </template>
+
+                            <!-- Durum 3: Butona basılmadıysa ama takvimde boş saat de yoksa ilk başta görünecek bilgilendirme -->
+                            <template if:false={isSubmittedSuccessfully}>
+                                <template if:false={selectedHour}>
+                                    <div class="info-alert-box" style="border-color: #ff8b3d;">
+                                        <span class="info-alert-title" style="color: #ff8b3d;">
+                                            ℹ️ Note: No Open Slots Available
+                                        </span>
+                                        <p class="info-alert-desc">
+                                            Since there are no active slots on the calendar, please click "Confirm" below. We will save your preferences and **contact you** to book a custom slot manually.
+                                        </p>
+                                    </div>
+                                </template>
+                            </template>
+
+                        </div>
+                    </div>
+            
+                <div class="consent-section">
+
+                    <label class="checkbox-row">
+
+                        <input
+                            type="checkbox"
+                            checked={termsAccepted}
+                            onchange={handleTermsConsent}>
+                            
+                        <span>
+                            <span class="required-star"> *</span>
+                            I accept the Privacy Policy and Terms of Service.
+                        </span>
+
+                    </label>
+                    <br>
+                    <label class="checkbox-row">
+
+                        <input
+                            type="checkbox"
+                            checked={marketingConsent}
+                            onchange={handleMarketingConsent}>
+                        
+                        <span>
+                            I agree to receive emails, SMS updates and promotions.
+                        </span>
+
+                    </label>
+
+                </div>
+            
+                <template if:true={termsAccepted}>
+
+                    <button
+                        class="primary-btn"
+                        onclick={handleSubmit}>
+
+                        Confirm Consultation
+
+                    </button>
+
+                </template>
+
+                <template if:false={termsAccepted}>
+
+                    <button
+                        class="primary-btn disabled-btn">
+
+                        Confirm Consultation
+
+                    </button>
+
+                </template>
+            </div>
+
+        </template>
+
+        <!-- NAVIGATION -->
+
+        <div class="navigation-buttons">
+
+            <template if:false={isStep1}>
+
+                <button
+                    class="secondary-btn"
+                    onclick={handlePrevious}>
+
+                    Back
+
+                </button>
+
+            </template>
+
+            <template if:false={isStep6}>
+
+                <button
+                    class="primary-btn"
+                    onclick={handleNext}>
+
+                    Continue
+
+                </button>
+
+            </template>
+
+        </div>
+
+    </section>
+
+</template>

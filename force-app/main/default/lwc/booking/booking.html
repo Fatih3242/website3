@@ -1,0 +1,229 @@
+<!--
+  @description       : 
+  @author            : Fatih SARI
+  @group             : 
+  @last modified on  : 05-15-2026
+  @last modified by  : Fatih SARI
+-->
+<template>
+
+    <section class="booking-page">
+
+        <!-- HERO -->
+
+        <div class="hero-section">
+
+            <p class="mini-title">
+                FREE CONSULTATION
+            </p>
+
+            <h1>
+                Build Your CRM Setup
+            </h1>
+
+            <p class="hero-description">
+                Tell us about your business and get a simple CRM solution
+                tailored for your needs.
+            </p>
+
+        </div>
+
+        <!-- FORM -->
+
+        <div class="form-wrapper">
+
+            <!-- STEP INDICATOR -->
+
+            <div class="step-indicator">
+
+                <div class={step1Class}>1</div>
+                <div class={step2Class}>2</div>
+                <div class={step3Class}>3</div>
+                <div class={step4Class}>4</div>
+                <div class={step5Class}>5</div>
+
+            </div>
+
+            <!-- STEP 1 -->
+
+            <template if:true={isStep1}>
+
+                <div class="form-card">
+
+                    <h2>Contact Information</h2>
+
+                    <lightning-input
+                        label="Full Name"
+                        value={fullName}>
+                    </lightning-input>
+
+                    <lightning-input
+                        label="Company Name"
+                        value={companyName}>
+                    </lightning-input>
+
+                    <lightning-input
+                        type="email"
+                        label="Email"
+                        value={email}>
+                    </lightning-input>
+
+                    <lightning-input
+                        type="tel"
+                        label="Phone Number"
+                        value={phone}>
+                    </lightning-input>
+
+                </div>
+
+            </template>
+
+            <!-- STEP 2 -->
+
+            <template if:true={isStep2}>
+
+                <div class="form-card">
+
+                    <h2>Business Size</h2>
+
+                    <lightning-radio-group
+                        label="How many employees do you have?"
+                        options={employeeOptions}
+                        value={employeeSize}>
+                    </lightning-radio-group>
+
+                    <lightning-radio-group
+                        label="How many people will use the system?"
+                        options={userOptions}
+                        value={userCount}>
+                    </lightning-radio-group>
+
+                </div>
+
+            </template>
+
+            <!-- STEP 3 -->
+
+            <template if:true={isStep3}>
+
+                <div class="form-card">
+
+                    <h2>Current System</h2>
+
+                    <lightning-radio-group
+                        label="Are you currently using a CRM?"
+                        options={crmOptions}
+                        value={crmType}>
+                    </lightning-radio-group>
+
+                    <template if:true={showSalesforceOptions}>
+
+                        <lightning-checkbox-group
+                            label="Which Salesforce products do you use?"
+                            options={salesforceOptions}
+                            value={selectedClouds}>
+                        </lightning-checkbox-group>
+
+                    </template>
+
+                </div>
+
+            </template>
+
+            <!-- STEP 4 -->
+
+            <template if:true={isStep4}>
+
+                <div class="form-card">
+
+                    <h2>Features You Need</h2>
+
+                    <lightning-checkbox-group
+                        options={featureOptions}
+                        value={selectedFeatures}>
+                    </lightning-checkbox-group>
+
+                    <lightning-radio-group
+                        label="How many customer messages do you send monthly?"
+                        options={messageOptions}
+                        value={messageVolume}>
+                    </lightning-radio-group>
+
+                </div>
+
+            </template>
+
+            <!-- STEP 5 -->
+
+            <template if:true={isStep5}>
+
+                <div class="form-card summary-card">
+
+                    <h2>Your Estimated Setup</h2>
+
+                    <div class="summary-box">
+
+                        <h3>Estimated Starting Price</h3>
+
+                        <p class="price">
+                            €99 - €499 / month
+                        </p>
+
+                    </div>
+
+                    <div class="summary-box">
+
+                        <h3>Estimated Setup Time</h3>
+
+                        <p>
+                            2 - 10 Business Days
+                        </p>
+
+                    </div>
+
+                    <div class="summary-box">
+
+                        <h3>Important Information</h3>
+
+                        <p>
+                            Salesforce licensing costs may apply
+                            depending on selected features and users.
+                        </p>
+
+                    </div>
+
+                    <button class="primary-btn submit-btn">
+                        Book Free Consultation
+                    </button>
+
+                </div>
+
+            </template>
+
+            <!-- NAVIGATION -->
+
+            <div class="navigation-buttons">
+
+                <template if:false={isStep1}>
+                    <button
+                        class="secondary-btn"
+                        onclick={handlePrevious}>
+                        Back
+                    </button>
+                </template>
+
+                <template if:false={isStep5}>
+                    <button
+                        class="primary-btn"
+                        onclick={handleNext}>
+                        Continue
+                    </button>
+                </template>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</template>

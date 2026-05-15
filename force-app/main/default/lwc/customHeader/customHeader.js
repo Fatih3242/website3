@@ -1,5 +1,5 @@
 import { LightningElement } from 'lwc';
-import KLOD_LOGO_RESOURCE from '@salesforce/resourceUrl/KlodLogo';
+import KLOD_LOGO_RESOURCE from '@salesforce/resourceUrl/Klod';
 import { NavigationMixin } from 'lightning/navigation';
 export default class CustomHeader extends NavigationMixin(LightningElement) {
     logoUrl = KLOD_LOGO_RESOURCE;
@@ -13,13 +13,19 @@ export default class CustomHeader extends NavigationMixin(LightningElement) {
         let targetPageApiName = 'Home'; // Hata durumunda ana sayfaya dönmesi için varsayılan
 
         // Tıklanan id değerine göre hangi sayfaya gidileceğini eşleştiriyoruz
-        if (selectedServiceId === 'sales') {
+        if (selectedServiceId === 'mail') {
             targetPageApiName = 'EmailAutomationService__c'; // Sizin açtığınız "sales" sayfasının API adı
-        } else if (selectedServiceId === 'service') {
-            targetPageApiName = 'Service__c'; // Sizin açtığınız "service" sayfasının API adı
-        } else if (selectedServiceId === 'agent') {
-            targetPageApiName = 'Agent__c'; // Sizin açtığınız "agent" sayfasının API adı
-        }
+        } else if (selectedServiceId === 'report') {
+            targetPageApiName = 'report__c'; // Sizin açtığınız "service" sayfasının API adı
+        } else if (selectedServiceId === 'customer') {
+            targetPageApiName = 'customer__c'; // Sizin açtığınız "agent" sayfasının API adı
+        }  else if (selectedServiceId === 'sms') {
+            targetPageApiName = 'sms__c'; // Sizin açtığınız "service" sayfasının API adı
+        } else if (selectedServiceId === 'lead') {
+            targetPageApiName = 'lead__c'; // Sizin açtığınız "agent" sayfasının API adı
+        }else if (selectedServiceId === 'ownportal') {
+            targetPageApiName = 'ownportal__c'; // Sizin açtığınız "service" sayfasının API adı
+        } 
 
         // Salesforce LWR uyumlu yönlendirme tetikleyicisi
         this[NavigationMixin.Navigate]({

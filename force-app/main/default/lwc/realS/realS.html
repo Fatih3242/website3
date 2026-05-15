@@ -1,0 +1,248 @@
+<!--
+  @description       : 
+  @author            : Fatih SARI
+  @group             : 
+  @last modified on  : 05-15-2026
+  @last modified by  : Fatih SARI
+-->
+<template>
+
+    <section class="service-page">
+
+        <!-- HERO -->
+
+        <div class="hero-section">
+
+            <div class="hero-left">
+
+                <p class="mini-title">
+                    SMS & NOTIFICATIONS
+                </p>
+
+                <h1>
+                    SMS & Notifications
+                </h1>
+
+                <p class="hero-description">
+                    Instantly reach your customers with SMS campaigns,
+                    reminders, and important notifications.
+                    Perfect for small businesses that want faster communication
+                    and higher customer engagement.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <button class="primary-btn" onclick={handleNavigation} data-id="booking">
+                        Book Free Consultation
+                    </button>
+
+ 
+                </div>
+
+            </div>
+
+            <div class="hero-right">
+
+                <template if:true={hasImage}>
+                    <img src={heroImage} alt="CRM Dashboard" />
+                </template>
+
+            </div>
+
+        </div>
+
+        <!-- BENEFITS -->
+
+        <section class="benefits-section">
+
+            <div class="benefit-card">
+
+                <lightning-icon
+                    icon-name="utility:sms"
+                    size="small">
+                </lightning-icon>
+
+                <h3>Instant Customer Communication</h3>
+
+                <p>
+                    Reach customers quickly with SMS notifications.
+                </p>
+
+            </div>
+
+            <div class="benefit-card">
+
+                <lightning-icon
+                    icon-name="utility:notification"
+                    size="small">
+                </lightning-icon>
+
+                <h3>Automatic Reminders</h3>
+
+                <p>
+                    Send appointment and payment reminders automatically.
+                </p>
+
+            </div>
+
+            <div class="benefit-card">
+
+                <lightning-icon
+                    icon-name="utility:campaign"
+                    size="small">
+                </lightning-icon>
+
+                <h3>Increase Engagement</h3>
+
+                <p>
+                    Improve response rates with direct mobile communication.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- HOW IT WORKS -->
+
+        <section class="steps-section">
+
+            <div class="section-header">
+
+                <p class="mini-title">
+                    HOW IT WORKS
+                </p>
+
+                <h2>
+                    Fast & Simple SMS Automation
+                </h2>
+
+            </div>
+
+            <div class="steps-grid">
+
+                <div class="step-card">
+
+                    <span>01</span>
+
+                    <h3>Import Customer Numbers</h3>
+
+                    <p>
+                        Connect your customer contact list easily.
+                    </p>
+
+                </div>
+
+                <div class="step-card">
+
+                    <span>02</span>
+
+                    <h3>Create Notifications</h3>
+
+                    <p>
+                        Build reminders, campaigns, and alerts quickly.
+                    </p>
+
+                </div>
+
+                <div class="step-card">
+
+                    <span>03</span>
+
+                    <h3>Send Automatically</h3>
+
+                    <p>
+                        Deliver messages instantly or schedule them in advance.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- FEATURES -->
+
+        <section class="features-section">
+
+            <div class="section-header">
+
+                <p class="mini-title">
+                    FEATURES
+                </p>
+
+                <h2>
+                    Everything You Need For Customer Messaging
+                </h2>
+
+            </div>
+
+            <div class="features-grid">
+
+                <div class="feature-item">
+                    ✔ Bulk SMS Campaigns
+                </div>
+
+                <div class="feature-item">
+                    ✔ Appointment Reminders
+                </div>
+
+                <div class="feature-item">
+                    ✔ Payment Notifications
+                </div>
+
+                <div class="feature-item">
+                    ✔ Scheduled Messaging
+                </div>
+
+                <div class="feature-item">
+                    ✔ Customer Segmentation
+                </div>
+
+                <div class="feature-item">
+                    ✔ Delivery Tracking
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- PRICING -->
+
+        <section class="pricing-section">
+
+            <p class="mini-title">
+                STARTING PRICE
+            </p>
+
+            <h2>
+                From €59 / month
+            </h2>
+
+            <p>
+                SMS delivery costs and Salesforce licensing
+                may apply depending on usage and selected features.
+            </p>
+
+        </section>
+
+        <!-- CTA -->
+
+        <section class="cta-section">
+
+            <h2>
+                Ready To Reach Customers Faster?
+            </h2>
+
+            <p>
+                Simplify customer communication with automated SMS notifications.
+            </p>
+
+            <button class="primary-btn" onclick={handleNavigation} data-id="booking">
+                Book Free Consultation
+            </button>
+
+        </section>
+
+    </section>
+
+</template>

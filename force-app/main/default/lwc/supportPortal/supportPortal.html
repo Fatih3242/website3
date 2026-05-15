@@ -1,0 +1,395 @@
+<!--
+  @description       : 
+  @author            : Fatih SARI
+  @group             : 
+  @last modified on  : 05-15-2026
+  @last modified by  : Fatih SARI
+-->
+<template>
+
+    <section class="support-page">
+
+        <!-- HERO -->
+
+        <div class="hero-section">
+
+            <p class="mini-title">
+                CUSTOMER SUPPORT
+            </p>
+
+            <h1>
+                How Can We Help You?
+            </h1>
+
+            <p class="hero-description">
+                Get support, ask questions, report issues,
+                or talk with our CRM experts.
+            </p>
+
+        </div>
+
+        <!-- TOP ACTIONS -->
+
+        <div class="top-actions">
+
+            <div class="action-card">
+
+                <div class="icon-circle">
+                    💬
+                </div>
+
+                <h2>
+                    Ask A Question
+                </h2>
+
+                <p>
+                    Need help understanding a feature
+                    or setting up your CRM?
+                </p>
+
+            </div>
+
+            <div class="action-card">
+
+                <div class="icon-circle">
+                    🛠️
+                </div>
+
+                <h2>
+                    Report A Problem
+                </h2>
+
+                <p>
+                    Having technical issues?
+                    Let us know and we will help.
+                </p>
+
+            </div>
+
+            <div class="action-card">
+
+                <div class="icon-circle">
+                    🤖
+                </div>
+
+                <h2>
+                    AI Assistant
+                </h2>
+
+                <p>
+                    Agentforce-ready support structure
+                    for instant customer help.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- MAIN GRID -->
+
+        <div class="support-grid">
+
+            <!-- LEFT -->
+
+            <div class="support-form-card">
+
+                <h2>
+                    Create Support Request
+                </h2>
+
+                <div class="input-grid">
+
+                    <input
+                        type="text"
+                        placeholder="Full Name"
+                        value={fullName}
+                        onchange={handleFullName}>
+
+                    <input
+                        type="email"
+                        placeholder="Email Address"
+                        value={email}
+                        onchange={handleEmail}>
+
+                    <input
+                        type="text"
+                        placeholder="Company Name"
+                        value={company}
+                        onchange={handleCompany}>
+
+                    <select
+                        onchange={handleCategory}>
+
+                        <option value="">
+                            Select Category
+                        </option>
+
+                        <option value="Technical Issue">
+                            Technical Issue
+                        </option>
+
+                        <option value="CRM Setup">
+                            CRM Setup
+                        </option>
+
+                        <option value="Email Campaign">
+                            Email Campaign
+                        </option>
+
+                        <option value="SMS Support">
+                            SMS Support
+                        </option>
+
+                        <option value="Billing">
+                            Billing
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <textarea
+                    placeholder="Describe your issue or question..."
+                    onchange={handleMessage}>
+                </textarea>
+
+                <div class="priority-section">
+
+                    <h3>
+                        Priority
+                    </h3>
+
+                    <div class="priority-grid">
+
+                        <div
+                            class={lowClass}
+                            data-value="Low"
+                            onclick={handlePriority}>
+
+                            Low
+
+                        </div>
+
+                        <div
+                            class={mediumClass}
+                            data-value="Medium"
+                            onclick={handlePriority}>
+
+                            Medium
+
+                        </div>
+
+                        <div
+                            class={highClass}
+                            data-value="High"
+                            onclick={handlePriority}>
+
+                            High
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="consent-section">
+
+                    <div class="checkbox-item">
+
+                        <input
+                            id="terms"
+                            class="custom-checkbox"
+                            type="checkbox"
+                            checked={termsAccepted}
+                            onchange={handleTermsConsent}>
+
+                        <label for="terms">
+
+                            <span class="required-star">*</span>
+
+                            I accept the Privacy Policy and Terms of Service.
+
+                        </label>
+
+                    </div>
+
+                    <div class="checkbox-item">
+
+                        <input
+                            id="marketing"
+                            class="custom-checkbox"
+                            type="checkbox"
+                            checked={marketingConsent}
+                            onchange={handleMarketingConsent}>
+
+                        <label for="marketing">
+
+                            I agree to receive emails,
+                            SMS updates and promotions.
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+                <template if:true={termsAccepted}>
+
+                    <button
+                        class="submit-btn"
+                        onclick={handleSubmit}>
+
+                        Submit Request
+
+                    </button>
+
+                </template>
+
+                <template if:false={termsAccepted}>
+
+                    <button
+                        class="submit-btn disabled-btn">
+
+                        Submit Request
+
+                    </button>
+
+                </template>
+
+            </div>
+
+            <!-- RIGHT -->
+
+            <div class="support-sidebar">
+
+                <!-- AI -->
+
+                <div class="sidebar-card ai-card">
+
+                    <p class="sidebar-mini">
+                        AGENTFORCE READY
+                    </p>
+
+                    <h2>
+                        AI Support Assistant
+                    </h2>
+
+                    <p>
+                        Future-ready architecture for
+                        Salesforce Agentforce AI support.
+                    </p>
+
+                    <div class="ai-status">
+
+                        <div class="status-dot"></div>
+
+                        <span>
+                            AI Structure Ready
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <!-- FAQ -->
+
+                <div class="sidebar-card">
+
+                    <h2>
+                        Popular Questions
+                    </h2>
+
+                    <div class="faq-item">
+
+                        <h3>
+                            How fast is setup?
+                        </h3>
+
+                        <p>
+                            Most CRM systems are ready
+                            within 2-10 business days.
+                        </p>
+
+                    </div>
+
+                    <div class="faq-item">
+
+                        <h3>
+                            Do you support SMS?
+                        </h3>
+
+                        <p>
+                            Yes. SMS and WhatsApp
+                            integrations are supported.
+                        </p>
+
+                    </div>
+
+                    <div class="faq-item">
+
+                        <h3>
+                            Can you migrate data?
+                        </h3>
+
+                        <p>
+                            Yes. We migrate Excel,
+                            HubSpot and Salesforce data.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- STATUS -->
+
+                <div class="sidebar-card">
+
+                    <h2>
+                        Service Status
+                    </h2>
+
+                    <div class="status-item">
+
+                        <span>
+                            CRM Services
+                        </span>
+
+                        <span class="online">
+                            Online
+                        </span>
+
+                    </div>
+
+                    <div class="status-item">
+
+                        <span>
+                            SMS Services
+                        </span>
+
+                        <span class="online">
+                            Online
+                        </span>
+
+                    </div>
+
+                    <div class="status-item">
+
+                        <span>
+                            Email Services
+                        </span>
+
+                        <span class="online">
+                            Online
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</template>

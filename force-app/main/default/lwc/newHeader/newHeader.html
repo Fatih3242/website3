@@ -1,0 +1,139 @@
+<!--
+  @description       : 
+  @author            : Fatih SARI
+  @group             : 
+  @last modified on  : 05-15-2026
+  @last modified by  : Fatih SARI
+-->
+<template>
+
+    <header class="custom-header">
+
+        <!-- LEFT -->
+
+        <div class="left-section">
+
+            <a href="/" class="logo-link">
+
+                <img
+                    src={logoUrl}
+                    alt="Klod Logo"
+                    class="header-logo" />
+
+            </a>
+
+        </div>
+
+        <!-- CENTER NAV -->
+
+        <nav class="desktop-nav">
+
+            <a href="/">
+                Home
+            </a>
+
+            <!-- SERVICES -->
+
+            <div class="dropdown">
+
+                <button class="dropbtn">
+
+                    Services
+
+                    <span class="arrow">
+                        ▾
+                    </span>
+
+                </button>
+
+                <div class="dropdown-content">
+
+                    <a
+                        href="#"
+                        onclick={handleServiceSelect}
+                        data-id="mail">
+
+                        ✉ Email Automation
+
+                    </a>
+
+                    <a
+                        href="#"
+                        onclick={handleServiceSelect}
+                        data-id="report">
+
+                        📊 Sales Tracking
+
+                    </a>
+
+                    <a
+                        href="#"
+                        onclick={handleServiceSelect}
+                        data-id="customer">
+
+                        👥 Customer Management
+
+                    </a>
+
+                    <a
+                        href="#"
+                        onclick={handleServiceSelect}
+                        data-id="sms">
+
+                        📱 SMS Notifications
+
+                    </a>
+
+                    <a
+                        href="#"
+                        onclick={handleServiceSelect}
+                        data-id="lead">
+
+                        🌐 Lead Collection
+
+                    </a>
+
+                    <a
+                        href="#"
+                        onclick={handleServiceSelect}
+                        data-id="ownportal">
+
+                        🔐 Customer Portal
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <a href="/aboutUs">
+                About
+            </a>
+
+            <a href="/supportPortal">
+                Support
+            </a>
+
+            <a href="/systems">
+                Status
+            </a>
+
+        </nav>
+
+        <!-- RIGHT -->
+
+        <div class="right-section">
+
+            <a
+                href="/booking"
+                class="cta-btn">
+
+                Book Consultation
+
+            </a>
+
+        </div>
+
+    </header>
+
+</template>

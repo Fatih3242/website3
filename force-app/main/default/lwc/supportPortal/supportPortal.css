@@ -1,0 +1,299 @@
+.support-page{
+    min-height:100vh;
+    background:#03152b;
+    padding:5rem 8%;
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* HERO */
+
+.hero-section{
+    text-align:center;
+    margin-bottom:4rem;
+}
+
+.mini-title{
+    color:#5fa8ff;
+    font-size:0.8rem;
+    font-weight:700;
+    letter-spacing:2px;
+    margin-bottom:1rem;
+}
+
+h1{
+    font-size:4rem;
+    margin-bottom:1rem;
+}
+
+.hero-description{
+    color:#cbd5e1;
+    max-width:700px;
+    margin:auto;
+    line-height:1.7;
+}
+
+/* TOP CARDS */
+
+.top-actions{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1.5rem;
+    margin-bottom:3rem;
+}
+
+.action-card{
+    background:#111d32;
+    border-radius:24px;
+    padding:2rem;
+    border:1px solid rgba(255,255,255,0.08);
+}
+
+.icon-circle{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#223654;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:1.5rem;
+    margin-bottom:1.5rem;
+}
+
+/* GRID */
+
+.support-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:2rem;
+}
+
+/* FORM */
+
+.support-form-card{
+    background:#111d32;
+    border-radius:28px;
+    padding:3rem;
+    border:1px solid rgba(255,255,255,0.08);
+}
+
+.support-form-card h2{
+    margin-bottom:2rem;
+}
+
+/* INPUT */
+
+.input-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1.5rem;
+    margin-bottom:1.5rem;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    background:#1c2940;
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:14px;
+    color:white;
+    padding:1rem;
+    font-size:1rem;
+    box-sizing:border-box;
+}
+
+input::placeholder,
+textarea::placeholder{
+    color:#94a3b8;
+}
+
+textarea{
+    height:180px;
+    resize:none;
+    margin-bottom:2rem;
+}
+
+/* PRIORITY */
+
+.priority-section{
+    margin-top:1rem;
+}
+
+.priority-section h3{
+    margin-bottom:1rem;
+}
+
+.priority-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1rem;
+}
+
+.priority-card{
+    background:#1c2940;
+    border-radius:16px;
+    padding:1rem;
+    text-align:center;
+    cursor:pointer;
+    border:1px solid rgba(255,255,255,0.08);
+    transition:0.3s;
+}
+
+.priority-card.selected{
+    background:#223654;
+    border:2px solid #5fa8ff;
+}
+
+/* CONSENT */
+
+.consent-section{
+    margin-top:2rem;
+    display:flex;
+    flex-direction:column;
+    gap:1.2rem;
+}
+
+.checkbox-item{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.custom-checkbox{
+    width:18px !important;
+    height:18px !important;
+    min-width:18px !important;
+    max-width:18px !important;
+    margin:0 !important;
+    padding:0 !important;
+    accent-color:#ff8b3d;
+    cursor:pointer;
+}
+
+.checkbox-item label{
+    color:white;
+    font-size:15px;
+    line-height:1.5;
+    cursor:pointer;
+}
+
+.required-star{
+    color:#ff4d4f;
+    margin-right:4px;
+    font-weight:700;
+}
+
+/* BUTTON */
+
+.submit-btn{
+    width:100%;
+    height:58px;
+    margin-top:2rem;
+    border:none;
+    border-radius:16px;
+    background:#ff8b3d;
+    color:white;
+    font-size:1rem;
+    font-weight:700;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.submit-btn:hover{
+    transform:translateY(-2px);
+}
+
+.disabled-btn{
+    background:#64748b !important;
+    opacity:0.55;
+    pointer-events:none;
+    cursor:not-allowed;
+}
+
+/* SIDEBAR */
+
+.support-sidebar{
+    display:flex;
+    flex-direction:column;
+    gap:1.5rem;
+}
+
+.sidebar-card{
+    background:#111d32;
+    border-radius:24px;
+    padding:2rem;
+    border:1px solid rgba(255,255,255,0.08);
+}
+
+.sidebar-mini{
+    color:#5fa8ff;
+    font-size:0.75rem;
+    font-weight:700;
+    letter-spacing:2px;
+    margin-bottom:1rem;
+}
+
+.ai-status{
+    display:flex;
+    align-items:center;
+    gap:0.7rem;
+    margin-top:1.5rem;
+}
+
+.status-dot{
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background:#00d26a;
+}
+
+.faq-item{
+    margin-top:1.5rem;
+}
+
+.faq-item h3{
+    margin-bottom:0.5rem;
+}
+
+.faq-item p{
+    color:#cbd5e1;
+    line-height:1.6;
+}
+
+.status-item{
+    display:flex;
+    justify-content:space-between;
+    margin-top:1rem;
+}
+
+.online{
+    color:#00d26a;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .support-page{
+        padding:3rem 1.5rem;
+    }
+
+    h1{
+        font-size:2.5rem;
+    }
+
+    .top-actions,
+    .support-grid,
+    .input-grid,
+    .priority-grid{
+        grid-template-columns:1fr;
+    }
+
+    .support-form-card,
+    .sidebar-card{
+        padding:2rem;
+    }
+
+}

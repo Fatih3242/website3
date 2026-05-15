@@ -1,0 +1,345 @@
+.booking-page{
+    min-height:100vh;
+    background:#03152b;
+    padding:5rem 8%;
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* HERO */
+
+.hero-section{
+    text-align:center;
+    margin-bottom:3rem;
+}
+
+.mini-title{
+    color:#5fa8ff;
+    font-size:0.8rem;
+    font-weight:700;
+    letter-spacing:2px;
+    margin-bottom:1rem;
+}
+
+h1{
+    font-size:4rem;
+    margin-bottom:1rem;
+}
+
+.hero-description{
+    color:#cbd5e1;
+    font-size:1.1rem;
+}
+
+/* STEP BAR */
+
+.step-indicator{
+    display:flex;
+    justify-content:center;
+    gap:1rem;
+    margin-bottom:3rem;
+}
+
+.step{
+    width:52px;
+    height:52px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.08);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    font-weight:700;
+}
+
+.step.active{
+    background:#5fa8ff;
+    box-shadow:0 0 20px rgba(95,168,255,0.4);
+}
+
+/* CARD */
+
+.form-card{
+    max-width:1000px;
+    margin:auto;
+    background:#111d32;
+    border-radius:28px;
+    padding:3rem;
+    border:1px solid rgba(255,255,255,0.08);
+}
+
+.form-card h2{
+    font-size:2rem;
+    margin-bottom:2rem;
+}
+
+.section-title{
+    margin-top:3rem;
+}
+
+/* INPUT */
+
+.input-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1.5rem;
+}
+
+.input-grid input{
+    height:60px;
+    background:#1c2940;
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:14px;
+    padding:0 1rem;
+    color:white;
+    font-size:1rem;
+}
+
+.input-grid input::placeholder{
+    color:#94a3b8;
+}
+
+/* CARDS */
+
+.card-grid,
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:1.2rem;
+}
+
+.option-card,
+.feature-card{
+    background:#1c2940;
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:18px;
+    padding:1.5rem;
+    cursor:pointer;
+    transition:0.3s;
+    font-weight:600;
+}
+
+.option-card:hover,
+.feature-card:hover{
+    border-color:#5fa8ff;
+    transform:translateY(-3px);
+}
+
+.selected{
+    background:#223654;
+    border:2px solid #5fa8ff;
+    box-shadow:0 0 20px rgba(95,168,255,0.25);
+}
+
+/* BOOKING */
+
+.booking-layout{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:2rem;
+}
+
+.calendar-card,
+.hours-card{
+    background:#111d32;
+    border-radius:28px;
+    padding:3rem;
+    border:1px solid rgba(255,255,255,0.08);
+}
+
+.calendar-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1rem;
+    margin-top:2rem;
+}
+
+.day-card{
+    background:#1c2940;
+    border-radius:16px;
+    padding:1rem;
+    text-align:center;
+    cursor:pointer;
+}
+
+.day-card.active{
+    background:#5fa8ff;
+}
+
+.day-card.disabled{
+    opacity:0.3;
+    pointer-events:none;
+}
+
+.hours-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:1rem;
+    margin-top:2rem;
+}
+
+.hour-card{
+    background:#1c2940;
+    border-radius:16px;
+    padding:1rem;
+    text-align:center;
+    cursor:pointer;
+}
+
+.hour-card.active{
+    background:#5fa8ff;
+}
+
+/* SUMMARY */
+
+.summary-box{
+    background:#1c2940;
+    border-radius:18px;
+    padding:1.5rem;
+    margin-bottom:1rem;
+}
+
+/* BUTTONS */
+
+.navigation-buttons{
+    max-width:1200px;
+    margin:2rem auto 0;
+    display:flex;
+    justify-content:space-between;
+}
+
+.disabled-btn{
+
+    background:#475569 !important;
+
+    opacity:0.55;
+
+    cursor:not-allowed;
+
+    pointer-events:none;
+
+}
+
+.primary-btn{
+
+    width:100%;
+    height:58px;
+    border:none;
+    border-radius:16px;
+    background:#ff8b3d;
+    color:white;
+    font-size:1rem;
+    font-weight:700;
+    cursor:pointer;
+    transition:0.3s;
+
+}
+
+
+.secondary-btn{
+    background:transparent;
+    border:1px solid rgba(255,255,255,0.1);
+    color:white;
+    padding:1rem 2rem;
+    border-radius:14px;
+    cursor:pointer;
+}
+
+.full-btn{
+    width:100%;
+    margin-top:2rem;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    h1{
+        font-size:2.5rem;
+    }
+
+    .input-grid,
+    .card-grid,
+    .feature-grid,
+    .booking-layout{
+        grid-template-columns:1fr;
+    }
+
+    .calendar-grid,
+    .hours-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .form-card,
+    .calendar-card,
+    .hours-card{
+        padding:2rem;
+    }
+    
+    .consent-section{
+
+    margin-top:2rem;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:1rem;
+
+    }
+
+    .checkbox-row{
+
+        display:flex;
+
+        align-items:flex-start;
+
+        gap:0.8rem;
+
+        width:100%;
+
+    }
+
+    .required-star{
+
+    color:#ff4d4f;
+
+    margin-right:4px;
+
+    font-weight:1000;
+
+    }
+
+    /* NO AVAILABLE SLOTS SUMMARY CARD STYLES */
+
+.info-alert-box {
+    background: rgba(255, 139, 61, 0.08); /* Sizin turuncu rengin (#ff8b3d) soft transparan hali */
+    border: 1px solid #ff8b3d;
+    border-radius: 18px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.info-alert-title {
+    color: #ff8b3d;
+    font-size: 1.1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.info-alert-desc {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+}

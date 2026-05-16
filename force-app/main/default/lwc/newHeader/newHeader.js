@@ -70,10 +70,9 @@ extends NavigationMixin(LightningElement) {
         });
 
         window.scrollTo({
-
-            top:0,
-            behavior:'smooth'
-
+            top: 0,
+            left: 0,
+            behavior: 'smooth' // Sayfanın yumuşak bir kayma efektiyle yukarı çıkmasını sağlar
         });
 
     }

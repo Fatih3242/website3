@@ -2,10 +2,10 @@
  * @description       : 
  * @author            : Fatih SARI
  * @group             : 
- * @last modified on  : 05-15-2026
+ * @last modified on  : 05-16-2026
  * @last modified by  : Fatih SARI
 **/
-public with sharing class BookingProController {
+public without sharing class BookingProController {
 
     @AuraEnabled(cacheable=true)
     public static Map<String, List<String>> getAvailableDatesAndHours() {

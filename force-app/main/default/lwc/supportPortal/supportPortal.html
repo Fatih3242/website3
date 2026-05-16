@@ -1,10 +1,8 @@
 <!--
-  @description       : 
+  @description       :
   @author            : Fatih SARI
-  @group             : 
-  @last modified on  : 05-15-2026
-  @last modified by  : Fatih SARI
 -->
+
 <template>
 
     <section class="support-page">
@@ -93,166 +91,212 @@
 
             <div class="support-form-card">
 
-                <h2>
-                    Create Support Request
-                </h2>
+                <!-- FORM -->
 
-                <div class="input-grid">
+                <template if:false={isSubmittedSuccessfully}>
 
-                    <input
-                        type="text"
-                        placeholder="Full Name"
-                        value={fullName}
-                        onchange={handleFullName}>
+                    <h2>
+                        Create Support Request
+                    </h2>
 
-                    <input
-                        type="email"
-                        placeholder="Email Address"
-                        value={email}
-                        onchange={handleEmail}>
-
-                    <input
-                        type="text"
-                        placeholder="Company Name"
-                        value={company}
-                        onchange={handleCompany}>
-
-                    <select
-                        onchange={handleCategory}>
-
-                        <option value="">
-                            Select Category
-                        </option>
-
-                        <option value="Technical Issue">
-                            Technical Issue
-                        </option>
-
-                        <option value="CRM Setup">
-                            CRM Setup
-                        </option>
-
-                        <option value="Email Campaign">
-                            Email Campaign
-                        </option>
-
-                        <option value="SMS Support">
-                            SMS Support
-                        </option>
-
-                        <option value="Billing">
-                            Billing
-                        </option>
-
-                    </select>
-
-                </div>
-
-                <textarea
-                    placeholder="Describe your issue or question..."
-                    onchange={handleMessage}>
-                </textarea>
-
-                <div class="priority-section">
-
-                    <h3>
-                        Priority
-                    </h3>
-
-                    <div class="priority-grid">
-
-                        <div
-                            class={lowClass}
-                            data-value="Low"
-                            onclick={handlePriority}>
-
-                            Low
-
-                        </div>
-
-                        <div
-                            class={mediumClass}
-                            data-value="Medium"
-                            onclick={handlePriority}>
-
-                            Medium
-
-                        </div>
-
-                        <div
-                            class={highClass}
-                            data-value="High"
-                            onclick={handlePriority}>
-
-                            High
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="consent-section">
-
-                    <div class="checkbox-item">
+                    <div class="input-grid">
 
                         <input
-                            id="terms"
-                            class="custom-checkbox"
-                            type="checkbox"
-                            checked={termsAccepted}
-                            onchange={handleTermsConsent}>
-
-                        <label for="terms">
-
-                            <span class="required-star">*</span>
-
-                            I accept the Privacy Policy and Terms of Service.
-
-                        </label>
-
-                    </div>
-
-                    <div class="checkbox-item">
+                            type="text"
+                            placeholder="Full Name"
+                            value={fullName}
+                            oninput={handleFullName}>
 
                         <input
-                            id="marketing"
-                            class="custom-checkbox"
-                            type="checkbox"
-                            checked={marketingConsent}
-                            onchange={handleMarketingConsent}>
+                            data-id="supportEmailField"
+                            type="email"
+                            required
+                            pattern="^[^\s@]+@[^\s@]+\.[^\s@]{2,}$"
+                            placeholder="Email Address"
+                            value={email}
+                            oninput={handleEmail}>
 
-                        <label for="marketing">
+                        <input
+                            type="text"
+                            placeholder="Company Name"
+                            value={company}
+                            oninput={handleCompany}>
 
-                            I agree to receive emails,
-                            SMS updates and promotions.
+                        <select
+                            onchange={handleCategory}>
 
-                        </label>
+                            <option value="">
+                                Select Category
+                            </option>
+
+                            <option value="Technical Issue">
+                                Technical Issue
+                            </option>
+
+                            <option value="CRM Setup">
+                                CRM Setup
+                            </option>
+
+                            <option value="Email Campaign">
+                                Email Campaign
+                            </option>
+
+                            <option value="SMS Support">
+                                SMS Support
+                            </option>
+
+                            <option value="Billing">
+                                Billing
+                            </option>
+
+                        </select>
 
                     </div>
 
-                </div>
+                    <textarea
+                        placeholder="Describe your issue or question..."
+                        oninput={handleMessage}>
+                    </textarea>
 
-                <template if:true={termsAccepted}>
+                    <!-- PRIORITY -->
+
+                    <div class="priority-section">
+
+                        <h3>
+                            Priority
+                        </h3>
+
+                        <div class="priority-grid">
+
+                            <div
+                                class={lowClass}
+                                data-value="Low"
+                                onclick={handlePriority}>
+
+                                Low
+
+                            </div>
+
+                            <div
+                                class={mediumClass}
+                                data-value="Medium"
+                                onclick={handlePriority}>
+
+                                Medium
+
+                            </div>
+
+                            <div
+                                class={highClass}
+                                data-value="High"
+                                onclick={handlePriority}>
+
+                                High
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- CONSENTS -->
+
+                    <div class="consent-section">
+
+                        <div class="checkbox-item">
+
+                            <input
+                                id="terms"
+                                class="custom-checkbox"
+                                type="checkbox"
+                                checked={termsAccepted}
+                                onchange={handleTermsConsent}>
+
+                            <label for="terms">
+
+                                <span class="required-star">*</span>
+
+                                I accept the Privacy Policy and Terms of Service.
+
+                            </label>
+
+                        </div>
+
+                        <div class="checkbox-item">
+
+                            <input
+                                id="marketing"
+                                class="custom-checkbox"
+                                type="checkbox"
+                                checked={marketingConsent}
+                                onchange={handleMarketingConsent}>
+
+                            <label for="marketing">
+
+                                I agree to receive emails,
+                                SMS updates and promotions.
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                    <!-- ERROR -->
+
+                    <template if:true={submitErrorMessage}>
+
+                        <div class="submit-error-box">
+
+                            {submitErrorMessage}
+
+                        </div>
+
+                    </template>
+
+                    <!-- BUTTON -->
 
                     <button
                         class="submit-btn"
-                        onclick={handleSubmit}>
+                        onclick={handleSubmit}
+                        disabled={isSubmitting}>
 
-                        Submit Request
+                        <template if:false={isSubmitting}>
+
+                            Submit Request
+
+                        </template>
+
+                        <template if:true={isSubmitting}>
+
+                            Submitting...
+
+                        </template>
 
                     </button>
 
                 </template>
 
-                <template if:false={termsAccepted}>
+                <!-- SUCCESS -->
 
-                    <button
-                        class="submit-btn disabled-btn">
+                <template if:true={isSubmittedSuccessfully}>
 
-                        Submit Request
+                    <div class="success-box">
 
-                    </button>
+                        <h2>
+                            Thank You!
+                        </h2>
+
+                        <p>
+                            Your support request has been successfully submitted.
+                        </p>
+
+                        <p>
+                            Our CRM specialists will review your request
+                            and contact you shortly.
+                        </p>
+
+                    </div>
 
                 </template>
 
@@ -264,7 +308,7 @@
 
                 <!-- AI -->
 
-                <div class="sidebar-card ai-card">
+                <div class="sidebar-card">
 
                     <p class="sidebar-mini">
                         AGENTFORCE READY
@@ -319,8 +363,7 @@
                         </h3>
 
                         <p>
-                            Yes. SMS and WhatsApp
-                            integrations are supported.
+                            Yes. SMS and WhatsApp integrations are supported.
                         </p>
 
                     </div>

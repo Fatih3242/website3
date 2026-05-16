@@ -82,7 +82,7 @@ h1{
     margin-bottom:2rem;
 }
 
-/* INPUT */
+/* INPUTS */
 
 .input-grid{
     display:grid;
@@ -107,6 +107,10 @@ textarea{
 input::placeholder,
 textarea::placeholder{
     color:#94a3b8;
+}
+
+select{
+    cursor:pointer;
 }
 
 textarea{
@@ -141,12 +145,16 @@ textarea{
     transition:0.3s;
 }
 
+.priority-card:hover{
+    transform:translateY(-2px);
+}
+
 .priority-card.selected{
     background:#223654;
     border:2px solid #5fa8ff;
 }
 
-/* CONSENT */
+/* CONSENTS */
 
 .consent-section{
     margin-top:2rem;
@@ -205,11 +213,44 @@ textarea{
     transform:translateY(-2px);
 }
 
-.disabled-btn{
-    background:#64748b !important;
-    opacity:0.55;
-    pointer-events:none;
+.submit-btn:disabled{
+    background:#64748b;
+    opacity:0.7;
     cursor:not-allowed;
+    transform:none;
+}
+
+/* ERROR */
+
+.submit-error-box{
+    margin-top:2rem;
+    background:#4a1111;
+    border:1px solid #ff6b6b;
+    color:#ffdede;
+    padding:1rem 1.2rem;
+    border-radius:14px;
+    line-height:1.6;
+    font-size:0.95rem;
+}
+
+/* SUCCESS */
+
+.success-box{
+    text-align:center;
+    padding:4rem 2rem;
+}
+
+.success-box h2{
+    font-size:2.7rem;
+    color:#ff8b3d;
+    margin-bottom:1rem;
+}
+
+.success-box p{
+    color:#cbd5e1;
+    line-height:1.8;
+    max-width:550px;
+    margin:auto;
 }
 
 /* SIDEBAR */

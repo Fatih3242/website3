@@ -19,6 +19,7 @@ export default class Bookingpro extends LightningElement {
     @track selectedHour = '';
     @track termsAccepted = false;
     @track marketingConsent = false;
+    @track consultationConfirmed = false;
 
     // Dinamik veri haritası ve başarı durum değişkeni
     allDataMap = {}; 
@@ -62,6 +63,8 @@ export default class Bookingpro extends LightningElement {
             
             // Sadece kayıt gerçekten başarılı olursa başarı ekranı açılsın
             this.isSubmittedSuccessfully = true;
+            this.termsAccepted = false;
+            this.consultationConfirmed = true;
 
         } catch (error) {
             console.error('Salesforce save error: ', error);
@@ -69,6 +72,15 @@ export default class Bookingpro extends LightningElement {
             const errorMessage = error.body ? error.body.message : error.message;
             alert('Salesforce Hata Mesajı: ' + errorMessage);
         }
+    }
+
+    consultationConfirmed = false;
+    get confirmButtonLabel() {
+
+            return this.consultationConfirmed
+                ? 'Consultation Request Submitted'
+                : 'Confirm Consultation';
+
     }
 
     handleTermsConsent(event) {
@@ -150,7 +162,35 @@ export default class Bookingpro extends LightningElement {
     }
 
     /* NAVIGATION EVENTS */
-    goToStep(event) { this.currentStep = Number(event.currentTarget.dataset.step); }
+    goToStep(event) {
+        const targetStep = Number(event.currentTarget.dataset.step);
+
+        // Eğer kullanıcı henüz 1. adımdaysa ve üst barda başka bir numaraya (2,3,4,5,6) tıklayarak kaçmaya çalışıyoralarsa kontrol et
+        if (this.currentStep === 1 && targetStep > 1) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            // E-posta boşsa veya hatalıysa başka adıma geçişi engelle ve hata balonunu göster
+            if (!this.email || !emailRegex.test(this.email)) {
+                const emailInput = this.template.querySelector('[data-id="emailField"]');
+                if (emailInput) {
+                    emailInput.setCustomValidity("Please enter a valid email address.");
+                    emailInput.reportValidity();
+                }
+                return; // Fonksiyonu durdur, üst numaraya geçişi iptal et
+            } else {
+                // Mail doğruysa eski hatayı temizle
+                const emailInput = this.template.querySelector('[data-id="emailField"]');
+                if (emailInput) {
+                    emailInput.setCustomValidity("");
+                    emailInput.reportValidity();
+                }
+            }
+        }
+
+        // Eğer e-posta kontrolünden geçtiyse veya zaten Step 1 dışındaysa tıklanan adıma normal şekilde git
+        this.currentStep = targetStep;
+    }
+    
     handleNext() {
         // Eğer kullanıcı 1. adımdaysa e-postayı kontrol et
         if (this.currentStep === 1) {

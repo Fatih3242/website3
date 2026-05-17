@@ -1,0 +1,162 @@
+<!--
+  @description       : 
+  @author            : Fatih SARI
+  @group             : 
+  @last modified on  : 05-17-2026
+  @last modified by  : Fatih SARI
+-->
+        <template>
+            <section class="logistics-page">
+
+            <!-- HERO -->
+
+            <div class="logistics-hero">
+
+                <p class="logistics-mini-title">
+                    LIVE BUSINESS SCENARIO
+                </p>
+
+                <h1 class="logistics-title">
+                    Smarter Logistics With Real-Time CRM Intelligence
+                </h1>
+
+                <p class="logistics-description">
+                    Discover how logistics companies can optimize delivery routes,
+                    monitor traffic density and improve operational efficiency
+                    using live data and CRM automation.
+                </p>
+
+            </div>
+
+            <!-- GRID -->
+
+            <div class="logistics-grid">
+
+                <!-- MAP -->
+
+                <div class="logistics-map-card">
+
+                    <template if:true={isLoading}>
+
+                        <div class="logistics-loading">
+
+                            <lightning-spinner
+                                alternative-text="Loading"
+                                size="medium">
+                            </lightning-spinner>
+
+                            <p>
+                                Loading live traffic data...
+                            </p>
+
+                        </div>
+
+                    </template>
+
+                    <template if:false={isLoading}>
+
+                        <div class="logistics-map-wrapper">
+
+                            <lightning-map
+                                map-markers={mapMarkers}
+                                center={mapCenter}
+                                zoom-level="6"
+                                list-view="hidden">
+                            </lightning-map>
+                            
+                        </div>
+                    
+
+                    </template>
+
+                </div>
+
+                <!-- SIDEBAR -->
+
+                <div class="logistics-sidebar">
+
+                    <div class="logistics-card">
+
+                        <h2 class="logistics-card-title">
+                            Delivery Optimization
+                        </h2>
+
+                        <p class="logistics-card-text">
+                            Companies can identify high traffic periods
+                            and automatically schedule deliveries during
+                            lower congestion hours.
+                        </p>
+
+                    </div>
+
+                    <div class="logistics-card">
+
+                        <h2 class="logistics-card-title">
+                            Live Route Monitoring
+                        </h2>
+
+                        <p class="logistics-card-text">
+                            CRM automation can track operational flow
+                            and generate instant reporting for managers
+                            and dispatch teams.
+                        </p>
+
+                    </div>
+
+                    <div class="logistics-card">
+
+                        <h2 class="logistics-card-title">
+                            System Status
+                        </h2>
+
+                        <div class="logistics-status-row">
+
+                            <span>
+                                Live Traffic API
+                            </span>
+
+                            <span class="logistics-status">
+                                Online
+                            </span>
+
+                        </div>
+
+                        <div class="logistics-status-row">
+
+                            <span>
+                                CRM Automation
+                            </span>
+
+                            <span class="logistics-status">
+                                Active
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- CTA -->
+
+            <div class="logistics-cta">
+
+                <p class="logistics-cta-text">
+                    Real-time CRM intelligence helps businesses reduce delays,
+                    improve customer satisfaction and optimize daily operations.
+                </p>
+
+                <a
+                    href="/"
+                    class="logistics-btn">
+
+                    Back To Homepage
+
+                </a>
+
+            </div>
+
+        </section>
+    </template>

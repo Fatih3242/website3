@@ -1,0 +1,174 @@
+:host{
+    display:block;
+    background:#03152b;
+}
+
+/* PAGE */
+
+.logistics-page{
+    background:#03152b;
+    min-height:100vh;
+    padding:5rem 8%;
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+    box-sizing:border-box;
+}
+
+/* HERO */
+
+.logistics-hero{
+    text-align:center;
+    margin-bottom:4rem;
+}
+
+.logistics-mini-title{
+    color:#5fa8ff;
+    font-size:0.8rem;
+    font-weight:700;
+    letter-spacing:2px;
+    margin-bottom:1rem;
+}
+
+.logistics-title{
+    font-size:4rem;
+    line-height:1.2;
+    margin-bottom:1.2rem;
+    color:white;
+}
+
+.logistics-description{
+    max-width:850px;
+    margin:auto;
+    color:#cbd5e1;
+    line-height:1.8;
+    font-size:1.05rem;
+}
+
+/* GRID */
+
+.logistics-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:2rem;
+    align-items:start;
+}
+
+/* MAP CARD */
+
+.logistics-map-card{
+    background:#111d32;
+    border-radius:28px;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,0.08);
+    padding:1rem;
+}
+
+.logistics-map-wrapper{
+    border-radius:20px;
+    overflow:hidden;
+    height:500px;
+}
+
+/* RIGHT SIDEBAR */
+
+.logistics-sidebar{
+    display:flex;
+    flex-direction:column;
+    gap:1.5rem;
+}
+
+.logistics-card{
+    background:#111d32;
+    border-radius:24px;
+    padding:2rem;
+    border:1px solid rgba(255,255,255,0.08);
+}
+
+.logistics-card-title{
+    font-size:1.2rem;
+    margin-bottom:1rem;
+    color:white;
+}
+
+.logistics-card-text{
+    color:#cbd5e1;
+    line-height:1.7;
+}
+
+.logistics-status-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:1rem;
+}
+
+.logistics-status{
+    color:#00d26a;
+    font-weight:700;
+}
+
+/* CTA */
+
+.logistics-cta{
+    margin-top:5rem;
+    text-align:center;
+}
+
+.logistics-cta-text{
+    color:#cbd5e1;
+    margin-bottom:2rem;
+    line-height:1.8;
+    font-size:1.05rem;
+}
+
+.logistics-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    height:58px;
+    padding:0 2rem;
+    border-radius:16px;
+    background:#ff8b3d;
+    color:white;
+    font-weight:700;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.logistics-btn:hover{
+    background:#ff9b55;
+    transform:translateY(-2px);
+}
+
+/* LOADING */
+
+.logistics-loading{
+    height:500px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    color:#cbd5e1;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .logistics-page{
+        padding:3rem 1.5rem;
+    }
+
+    .logistics-title{
+        font-size:2.5rem;
+    }
+
+    .logistics-grid{
+        grid-template-columns:1fr;
+    }
+
+    .logistics-map-wrapper{
+    height:320px;
+    min-height:320px;
+}
+}

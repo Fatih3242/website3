@@ -167,8 +167,12 @@
         grid-template-columns:1fr;
     }
 
+    .logistics-map-card{ 
+        min-height:360px;
+    }
     .logistics-map-wrapper{
     height:320px;
     min-height:320px;
+    }
 }
-}
+

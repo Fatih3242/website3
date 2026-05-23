@@ -66,11 +66,7 @@ export default class TrafficMap extends LightningElement {
                         // hem de dinamik javascript katmanlarından gelen hacim değerlerini güvenli okuyoruz.
                         let volumeValue = item.Congestion_Level__c != null ? item.Congestion_Level__c : 0;
                         
-                        // Eğer sunucudan veri dönmüyorsa test için her istasyona 100-800 arası dinamik araç akışı simüle et
-                        if (volumeValue === 0) {
-                            volumeValue = Math.floor(Math.random() * (800 - 100 + 1)) + 100;
-                        }
-
+                        
                         const isHigh = volumeValue > 400;
                         const markerColor = isHigh ? 'standard:resource_absence' : 'standard:task_check';
                         const trafficStatusText = isHigh ? this.currentLabels.high : this.currentLabels.normal;

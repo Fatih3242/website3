@@ -1,0 +1,272 @@
+.traffic-page {
+
+background: #f4f7fb;
+
+min-height: 100vh;
+
+padding: 40px;
+
+font-family: 'Salesforce Sans', Arial, sans-serif;
+
+}
+
+.hero-section {
+
+display: flex;
+
+justify-content: space-between;
+
+align-items: center;
+
+background: linear-gradient(135deg, #0f172a, #1e293b);
+
+border-radius: 24px;
+
+padding: 48px;
+
+margin-bottom: 32px;
+
+color: white;
+
+box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+}
+
+.hero-title {
+
+font-size: 42px;
+
+font-weight: 700;
+
+line-height: 1.1;
+
+margin: 12px 0;
+
+}
+
+.hero-description {
+
+font-size: 16px;
+
+opacity: 0.9;
+
+max-width: 600px;
+
+line-height: 1.6;
+
+}
+
+.hero-mini-title {
+
+font-size: 12px;
+
+letter-spacing: 2px;
+
+opacity: 0.7;
+
+text-transform: uppercase;
+
+}
+
+.hero-stat-card {
+
+background: rgba(255,255,255,0.08);
+
+backdrop-filter: blur(12px);
+
+border-radius: 20px;
+
+padding: 28px;
+
+min-width: 180px;
+
+text-align: center;
+
+}
+
+.hero-stat-number {
+
+font-size: 42px;
+
+font-weight: bold;
+
+}
+
+.hero-stat-label {
+
+margin-top: 6px;
+
+opacity: 0.8;
+
+}
+
+.traffic-grid {
+
+display: grid;
+
+grid-template-columns: 1fr 320px;
+
+gap: 24px;
+
+}
+
+.map-card {
+
+background: white;
+
+border-radius: 24px;
+
+overflow: hidden;
+
+box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+
+height: 760px;
+
+}
+
+.map-wrapper {
+
+height: 760px;
+width: 100%;
+
+}
+
+.map-wrapper lightning-map {
+
+display: block;
+
+height: 100%;
+
+}
+
+.map-wrapper iframe {
+
+border-radius: 24px;
+
+}
+
+.sidebar {
+
+display: flex;
+
+flex-direction: column;
+
+gap: 20px;
+
+}
+
+.info-card {
+
+background: white;
+
+border-radius: 20px;
+
+padding: 24px;
+
+box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+
+}
+
+.card-title {
+
+font-size: 18px;
+
+font-weight: 700;
+
+margin-bottom: 18px;
+
+color: #0f172a;
+
+}
+
+.status-row {
+
+display: flex;
+
+justify-content: space-between;
+
+margin-bottom: 14px;
+
+font-size: 14px;
+
+}
+
+.status-online {
+
+color: #16a34a;
+
+font-weight: 700;
+
+}
+
+.legend-item {
+
+display: flex;
+
+align-items: center;
+
+margin-bottom: 14px;
+
+font-size: 14px;
+
+}
+
+.legend-dot {
+
+width: 14px;
+
+height: 14px;
+
+border-radius: 50%;
+
+margin-right: 10px;
+
+}
+
+.green {
+
+background: #22c55e;
+
+}
+
+.yellow {
+
+background: #facc15;
+
+}
+
+.orange {
+
+background: #fb923c;
+
+}
+
+.red {
+
+background: #ef4444;
+
+}
+
+.loading-box {
+
+display: flex;
+
+flex-direction: column;
+
+justify-content: center;
+
+align-items: center;
+
+height: 100%;
+
+}
+
+.loading-text {
+
+margin-top: 18px;
+
+color: #64748b;
+
+font-size: 14px;
+
+}

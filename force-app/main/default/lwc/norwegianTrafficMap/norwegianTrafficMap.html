@@ -1,0 +1,207 @@
+<!--
+  @description       : 
+  @author            : Fatih SARI
+  @group             : 
+  @last modified on  : 05-23-2026
+  @last modified by  : Fatih SARI
+-->
+<template>
+
+<section class="traffic-page">
+
+
+<!-- HERO -->
+
+<div class="hero-section">
+
+    <div>
+
+        <p class="hero-mini-title">
+            LIVE CRM + LOGISTICS INTELLIGENCE
+        </p>
+
+        <h1 class="hero-title">
+            Norwegian Traffic Intelligence
+        </h1>
+
+        <p class="hero-description">
+            Real-time Norwegian road traffic monitoring
+            integrated with Salesforce CRM intelligence.
+        </p>
+
+    </div>
+
+    <div class="hero-stat-card">
+
+        <div class="hero-stat-number">
+            {markerCount}
+        </div>
+
+        <div class="hero-stat-label">
+            Active Points
+        </div>
+
+    </div>
+
+</div>
+
+<!-- MAIN GRID -->
+
+<div class="traffic-grid">
+
+    <!-- MAP -->
+
+    <div class="map-card">
+
+        <template if:true={isLoading}>
+
+            <div class="loading-box">
+
+                <lightning-spinner
+                    alternative-text="Loading"
+                    size="large">
+                </lightning-spinner>
+
+                <p class="loading-text">
+                    Loading Norwegian traffic intelligence...
+                </p>
+
+            </div>
+
+        </template>
+
+        <template if:false={isLoading}>
+
+            <div class="map-wrapper">
+
+                <lightning-map
+                    map-markers={mapMarkers}
+                    center={mapCenter}
+                    zoom-level={zoomLevel}
+                    list-view="hidden">
+                </lightning-map>
+
+            </div>
+
+        </template>
+
+    </div>
+
+    <!-- SIDEBAR -->
+
+    <div class="sidebar">
+
+        <!-- STATUS -->
+
+        <div class="info-card">
+
+            <h2 class="card-title">
+                System Status
+            </h2>
+
+            <div class="status-row">
+
+                <span>
+                    Traffic API
+                </span>
+
+                <span class="status-online">
+                    ONLINE
+                </span>
+
+            </div>
+
+            <div class="status-row">
+
+                <span>
+                    Salesforce Sync
+                </span>
+
+                <span class="status-online">
+                    ACTIVE
+                </span>
+
+            </div>
+
+            <div class="status-row">
+
+                <span>
+                    Queue Jobs
+                </span>
+
+                <span class="status-online">
+                    RUNNING
+                </span>
+
+            </div>
+
+        </div>
+
+        <!-- LEGEND -->
+
+        <div class="info-card">
+
+            <h2 class="card-title">
+                Traffic Levels
+            </h2>
+
+            <div class="legend-item">
+
+                <span class="legend-dot gray"></span>
+
+                <span>
+                    Updating
+                </span>
+
+            </div>
+
+            <div class="legend-item">
+
+                <span class="legend-dot green"></span>
+
+                <span>
+                    Light Traffic
+                </span>
+
+            </div>
+
+            <div class="legend-item">
+
+                <span class="legend-dot yellow"></span>
+
+                <span>
+                    Moderate Traffic
+                </span>
+
+            </div>
+
+            <div class="legend-item">
+
+                <span class="legend-dot orange"></span>
+
+                <span>
+                    Heavy Traffic
+                </span>
+
+            </div>
+
+            <div class="legend-item">
+
+                <span class="legend-dot red"></span>
+
+                <span>
+                    Critical Traffic
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+</section>
+
+</template>
